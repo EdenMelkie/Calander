@@ -1,0 +1,715 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#03A9F4"
+    android:backgroundTint="#FFEB3B"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="381dp"
+        android:layout_height="51dp"
+        android:background="#12BF19"
+        android:capitalize="characters"
+        android:fontFamily="sans-serif-medium"
+        android:text="እባክዎን የሚከተሉትን በኢትዮጵያን አቆጣጠር ይሙሉ!"
+        android:textColor="#D0390A"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#000000" />
+
+    <!-- TableLayout -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <!-- Year Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ዓመተ ምሕረት:" />
+
+            <EditText
+                android:id="@+id/etYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Year"
+                android:inputType="number"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Month Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ወር:" />
+
+            <EditText
+                android:id="@+id/etMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Month"
+                android:inputType="number"
+                android:padding="8dp" />
+        </TableRow>
+
+        <!-- Day Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ቀን:" />
+
+            <EditText
+                android:id="@+id/etDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Date"
+                android:inputType="number"
+                android:padding="8dp" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- TableLayout -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+    <!-- Button Row -->
+    <TableRow>
+        <!-- Button for calculate and reset -->
+
+        <Button
+        android:id="@+id/btnAddDays"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=" አስላ " />
+
+      <Button
+        android:id="@+id/btnReset"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=" አጥፋ/clear " />
+       </TableRow>
+    </TableLayout>
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#000000" />
+
+    <!-- Result -->
+    <TableLayout
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <!-- Wenber Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ወንበር:" />
+
+            <EditText
+                android:id="@+id/edwenber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Abeqtie Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="አበቅቴ:" />
+
+            <EditText
+                android:id="@+id/AB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Metkie Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="መጥቅዕ:" />
+
+            <EditText
+                android:id="@+id/MT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- MeteneRabit Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="መጠነ ራብዒት፡ " />
+
+            <EditText
+                android:id="@+id/MR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- MeteneSabit Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="መጠነ ሳብዒት: " />
+
+            <EditText
+                android:id="@+id/MS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Wengelawi Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ወንጌላዊ: " />
+
+            <EditText
+                android:id="@+id/Wengel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- sep 1 Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="መስከረም 1: " />
+
+            <EditText
+                android:id="@+id/sepOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Beale Metkie Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="በዓለ መጥቅዕ: " />
+
+            <EditText
+                android:id="@+id/BMT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Metkie Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="መባጃ ሐመር: " />
+
+            <EditText
+                android:id="@+id/MH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Sep 17 Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="መስቀል (መስከረም 17): " />
+
+            <EditText
+                android:id="@+id/Mesq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Tir 21 Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ጥር 21(አስተርእዮ): " />
+
+            <EditText
+                android:id="@+id/Tir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Megabit 29 Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="መጋቢት 29(ትስብእት): " />
+
+            <EditText
+                android:id="@+id/Meg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+    </TableLayout>
+
+    <!-- Atswamat -->
+    <TableLayout
+        android:id="@+id/tvResult2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="#B3A100FF"
+                android:textSize="40sp"
+                android:textAllCaps="true"
+                android:layout_margin="10px"
+                android:background="@color/design_default_color_secondary"
+                android:text="አጽዋማት:" />
+        </TableRow>
+
+        <!-- Nenewe Row -->
+        <TableRow>
+            <!-- Nenewe -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ጾመ ነነዌ:" />
+
+            <EditText
+                android:id="@+id/NN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Abiy Xome Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ዐቢይ ጾም:" />
+
+            <EditText
+                android:id="@+id/AY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- DebreZeyit Row -->
+        <TableRow>
+          <!-- DebreZeyit -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ደብረ ዘይት:" />
+
+            <EditText
+                android:id="@+id/DZ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Hosaina Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ሆሳዕና:" />
+
+            <EditText
+                android:id="@+id/HN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Siklet Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ስቅለት:" />
+
+            <EditText
+                android:id="@+id/ST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Tnsae Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ትንሳኤ:" />
+
+            <EditText
+                android:id="@+id/TA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Rikbe Kahnat Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ርክበ ካህናት:" />
+
+            <EditText
+                android:id="@+id/RC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Irget Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ዕርገት:" />
+
+            <EditText
+                android:id="@+id/IT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Peraqlitos Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ጾመ ጰራቅሊጦስ:" />
+
+            <EditText
+                android:id="@+id/PS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- xome Hawaryat Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ጾመ ሐዋርያት:" />
+
+            <EditText
+                android:id="@+id/HW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+
+        <!-- xome dhnet Row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ጾመ ድኅነት:" />
+
+            <EditText
+                android:id="@+id/DT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+
+        </TableRow>
+
+        <!-- Lelit Row -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ሠርቀ ሌሊት: " />
+
+            <EditText
+                android:id="@+id/lelit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+        </TableRow>
+
+        <!-- ወሪህ ሠርቀ Row -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ሠርቀ ወርኅ: " />
+
+            <EditText
+                android:id="@+id/werih"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+        </TableRow>
+
+        <!-- mealt Row -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ሠርቀ መዐልት: " />
+
+            <EditText
+                android:id="@+id/mealt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+        </TableRow>
+
+        <!-- Ilet Row -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="ሠርቀ ዕለት: " />
+
+            <EditText
+                android:id="@+id/Ilet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:background="@android:color/transparent" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
+</ScrollView>
